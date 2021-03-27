@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+  body {
+    background-image : url(https://i.ibb.co/ZVGcmXY/5505d0baba303556e4466d6ed3ae6af1.jpg) ;
+  background-color: #cccccc;
+  height: 700px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    
+}
+form {
+}
+    .text-muted {
+    color: #000000!important;
+    text-shadow: 3px 3px 5px rgb(255, 160, 160);
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    color: rgb(0, 0, 0);
+    
+  }
+div{
+    border: 2px solid #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    background-attachment: scroll;
+  
+  }
+  
+.text-muted{
+  color: #b92222;
+}
+
+  h1 {
+    color: black;
+    font-size: 3.5em;
+    padding: 0.5em;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+
+
+}
+form {
+  height: 200px;
+  background-color: #b92222;
+  
+    
+}
+.btn-primary {
+  background-color:rgb(141, 40, 9);
+}
+</style>
+</head>
+<body>
+  
+    <div class="container p-5">
+        <h1 class="text-center mb-5 text-uppercase text-muted">Real Time Chat</h1>    
+            <div class="text-uppercase center">
+              <form action="" method="POST">
+                <div class="form-group">
+                  <label for="_email">Your Name</label>
+                  <input type="text" name="user_name" id="_rname" class="form-control" placeholder="Name" rnodeequired>
+                </div>
+                <div class="form-group">
+                  <label for="_email">Email</label>
+                  <input type="text" name="user_email" id="_email" class="form-control" placeholder="Email" rnodeequired>
+                </div>
+                <% if (locals.login_errors) { 
+                  login_errors.forEach(function(error_msg){ %>
+                  <div class= "alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-primary">Enter Chat</button>
+            </form>      
+        </div>
+    </div>
+</body>
+</html>
